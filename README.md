@@ -4,7 +4,7 @@ Just Enough Fortran for reworking inherited code
 Course online materials:
 https://sway.office.com/FrztLkLkmyxuMAlT
 
-##Quickstart##
+## Quickstart
 Windows users: Assuming you downloaded the zip file for this repository and then expanded it in Documents, then:
 * Start Powershell
 * In Powershell issue the command:
