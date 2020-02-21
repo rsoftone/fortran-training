@@ -4,7 +4,7 @@ program pg
     ! 
     ! Section: Specification
     !
-    integer                       :: mml,i,j,retinfo  ! scalars
+    integer                       :: mml,i,retinfo  ! scalars
     double precision, allocatable :: a(:,:) ! a is a "deferred shape" array
     double precision, allocatable :: ata(:,:),meye(:,:)
     integer         , allocatable :: ipiv(:)
