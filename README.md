@@ -4,7 +4,8 @@ Course online materials:
 https://sway.office.com/FrztLkLkmyxuMAlT
 
 ## Quickstart
-Windows users: Assuming you downloaded the zip file for this repository and then expanded it in C:\Users\REPLACE-WITH-YOUR-DOCUMENTS-PATH, then:
+Windows users: 
+Download the zip file for this repository and expand it in C:\Users\REPLACE-WITH-YOUR-DOCUMENTS-PATH, then:
 
 * Start Powershell
 * In Powershell issue the command:
