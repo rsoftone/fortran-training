@@ -5,10 +5,8 @@ https://sway.office.com/FrztLkLkmyxuMAlT
 
 ## Quickstart
 Windows users: 
-For this example we will work in the directory
 
-C:\Users\REPLACE-WITH-YOUR-DOCUMENTS-PATH
-
+For this example, assume our working directory is C:\Users\REPLACE-WITH-YOUR-DOCUMENTS-PATH
 
 * Start Powershell
 * In Powershell issue the command:
