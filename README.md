@@ -5,7 +5,9 @@ https://sway.office.com/FrztLkLkmyxuMAlT
 
 ## Quickstart
 Windows users: 
-Download the zip file for this repository and expand it in C:\Users\REPLACE-WITH-YOUR-DOCUMENTS-PATH...
+Download the zip file for this repository and expand it in (for example)
+
+C:\Users\REPLACE-WITH-YOUR-DOCUMENTS-PATH
 
 Then:
 
