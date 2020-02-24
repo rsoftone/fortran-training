@@ -4,7 +4,7 @@ Course online materials:
 https://sway.office.com/FrztLkLkmyxuMAlT
 
 ## Quickstart
-Windows users: 
+Windows + Docker users: 
 
 For this example, assume our working directory is C:\Users\REPLACE-WITH-YOUR-DOCUMENTS-PATH
 
