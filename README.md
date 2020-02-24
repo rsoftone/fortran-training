@@ -5,23 +5,23 @@ https://sway.office.com/FrztLkLkmyxuMAlT
 
 ## Quickstart
 Windows users: 
-Download the zip file for this repository and expand it in (for example)
+For this example we will work in the directory
 
 C:\Users\REPLACE-WITH-YOUR-DOCUMENTS-PATH
 
-Then:
 
 * Start Powershell
 * In Powershell issue the command:
 
 ```
-docker run -it --rm --name fort2 -v C:\Users\REPLACE-WITH-YOUR-DOCUMENTS-PATH\docker\src:/home/pipelines dbjochym/gfortran_static_lapack_blas
+docker run -it --rm --name fort2 -v C:\Users\REPLACE-WITH-YOUR-DOCUMENTS-PATH:/home/pipelines dbjochym/gfortran_static_lapack_blas
 ```
 
 * In the container
 
 ```
 cd /home/pipelines
-chmod u+x helper.sh
+git clone https://github.com/rsoftone/fortran-training.git
+cd fortran-training/docker/src
 ./helper.sh 000-lu
 ```
