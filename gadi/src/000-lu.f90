@@ -12,8 +12,8 @@ program pg
     !
     ! Section: Execution
     !
-    Mml = 12
-    Retinfo = 0
+    mml = 12
+    retinfo = 0
     !
     ! Format for I/O
     ! 
@@ -34,7 +34,7 @@ program pg
     ! Assign all elements on the diagonal of meye to 1.0
     !
     do i = 1,mml
-        mEye(i,i) = 1.0d0
+        meye(i,i) = 1.0d0
     end do
     !
     ! Output the matrix: meye
