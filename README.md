@@ -23,9 +23,12 @@ cd /home/pipelines
 git clone https://github.com/rsoftone/fortran-training.git
 cd fortran-training/docker/src
 chmod u+x helper.sh
-./helper.sh 000-lu
 ```
 * To change the code, use your editor to open C:\Users\"YOUR NAME"\fortran-training\docker\src\000-lu.f90
+* To compile and run, use the commands:
+```
+./helper.sh 000-lu
+```
 
 ### Option B: Using NCI Gadi
 #### Windows 10:
@@ -43,3 +46,7 @@ chmod u+x helper.sh
 ./helper.sh 000-lu
 ```
 * To change the code, use your editor to open ~/fortran-training/gadi/src/000-lu.f90
+* To compile and run, use the commands:
+```
+./helper.sh 000-lu
+```
