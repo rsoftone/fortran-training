@@ -25,8 +25,8 @@ cd fortran-training/docker/src
 chmod u+x helper.sh
 ./helper.sh 000-lu
 ```
-
 * To change the code, use your editor to open C:\Users\"YOUR NAME"\fortran-training\docker\src\000-lu.f90
+
 ### Option B: Using NCI Gadi
 #### Windows 10:
 * Open Powershell
@@ -42,3 +42,4 @@ cd fortran-training/gadi/src
 chmod u+x helper.sh
 ./helper.sh 000-lu
 ```
+* To change the code, use your editor to open ~/fortran-training/gadi/src/000-lu.f90
