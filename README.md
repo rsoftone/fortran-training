@@ -16,7 +16,7 @@ https://sway.office.com/FrztLkLkmyxuMAlT
 docker run -it --rm --name fort2 -v $PWD\Documents:/home/pipelines dbjochym/gfortran_static_lapack_blas
 ```
 
-* In the container
+* You are now in the container...enter the following commands:
 
 ```
 cd /home/pipelines
@@ -31,3 +31,14 @@ chmod u+x helper.sh
 #### Windows 10:
 * Open Powershell
 * If ssh is not enabled on your Windows 10, please see the instructions [here](https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/)
+* Login to Gadi:
+```
+ssh YOUR_USERNAME@gadi.nci.org.au
+```
+* You are now in the login node of the cluster...enter the following commands:
+```
+git clone https://github.com/rsoftone/fortran-training.git
+cd fortran-training/gadi/src
+chmod u+x helper.sh
+./helper.sh 000-lu
+```
