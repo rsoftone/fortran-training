@@ -23,7 +23,8 @@ docker run -it --rm --name fort2 -v $PWD\Documents:/home/pipelines dbjochym/gfor
 cd /home/pipelines
 git clone https://github.com/rsoftone/fortran-training.git
 cd fortran-training/docker/src
+chmod u+x helper.sh
 ./helper.sh 000-lu
 ```
 
-* To change the code, use your editor to open C:\Users\REPLACE-WITH-YOUR-DOCUMENTS-PATH\fortran-training\docker\src\000-lu.f90
+* To change the code, use your editor to open C:\Users\"YOUR NAME"\fortran-training\docker\src\000-lu.f90
