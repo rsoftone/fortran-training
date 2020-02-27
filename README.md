@@ -43,7 +43,6 @@ ssh YOUR_USERNAME@gadi.nci.org.au
 git clone https://github.com/rsoftone/fortran-training.git
 cd fortran-training/gadi/src
 chmod u+x helper.sh
-./helper.sh 000-lu
 ```
 * To change the code, use your editor to open ~/fortran-training/gadi/src/000-lu.f90
 * To compile and run, use the commands:
