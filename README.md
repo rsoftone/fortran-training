@@ -54,3 +54,6 @@ chmod u+x helper.sh
 In contrast, Python, Julia, C/C++ and most modern languages treat uppercase and lowercase as different cases.
 ### 2: Indented code is not required
 In contrast, Python requires indents as part of its language block syntax.
+### 3: '!' indicates the start of a comment
+Q: How do you comment out an entire block in Fortran?
+A: You can't! (maybe your IDE will help you...)
