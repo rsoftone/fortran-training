@@ -49,3 +49,8 @@ chmod u+x helper.sh
 ```
 ./helper.sh 000-lu
 ```
+## 20 things to know about Fortran
+### 1: Fortran is not case sensitive
+In contrast, Python, Julia, C/C++ and most modern languages treat uppercase and lowercase as different cases.
+### 2: Indented code is not required
+In contrast, Python requires indents as part of its language block syntax.
