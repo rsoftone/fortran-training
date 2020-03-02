@@ -61,8 +61,11 @@ A: You can't! (maybe your IDE will help you...)
 A blank line, or a comment, can come after the '&'
 ### 5: Fortran real number values have a 'kind'
 Q: What is the difference between '1.23e0' and '1.23d0'?
+
 A: '1.23e0' is in 'default precision' which is 'single precision'
+
 A: '1.23d0' is in 'extended precision' which is 'double precision'
 
 Q: What 'kind' is the value: '1.2'?
+
 A: Default/Single precision
