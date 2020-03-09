@@ -12,8 +12,8 @@ program pg
     !
     ! Section: Execution
     !
-    Mml = 12
-    Retinfo = 0
+    mml = 12
+    retinfo = 0
     !
     ! Format for I/O
     ! 
