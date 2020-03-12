@@ -27,7 +27,7 @@ git clone https://github.com/rsoftone/fortran-training.git
 cd fortran-training/docker/src
 chmod u+x helper.sh
 ```
-* To change the code, use your editor to open C:\Users\"YOUR NAME"\fortran-training\docker\src\000-lu.f90
+* To change the code, use your editor to open C:\Users\YOUR-NAME\fortran-training\docker\src\000-lu.f90
 * To compile and run, use (in the container) the commands:
 ```
 ./helper.sh 000-lu
