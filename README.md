@@ -59,14 +59,30 @@ Q: How do you comment out an entire block in Fortran?
 
 A: You can't! (maybe your IDE will help you...)
 ### 4: '&', at the end of a line, means line continuation
-You may need this is you exceed 132 characters on a line.  A blank line, or a comment, can come after the '&'
+You may need this if you exceed 132 characters on a line.  A blank line, or a comment, can come after the '&'
 ### 5: Fortran real number values have a 'kind'
 Q: What is the difference between '1.23e0' and '1.23d0'?
 
-A: '1.23e0' is in 'default precision' which is 'single precision'
+A: '1.23e0' is 'single precision'
 
-A: '1.23d0' is in 'extended precision' which is 'double precision'
+A: '1.23d0' is 'double precision'
 
-Q: What 'kind' is the value: '1.2'?
+Q: What 'kind' is the value: '1.23'?
 
-A: Default/Single precision
+A: (Default)/Single precision
+
+### 6: 'implicit none' + "Specification" section for variables
+! Always use 'implicit none'; and immediately after, declare all variables
+### 7: Fortran variables are 'typed'
+Numeric
+```
+real :: r
+double precision :: x
+double complex :: z
+integer :: j
+logical :: b
+```
+Non-numeric
+```
+character :: s
+```
