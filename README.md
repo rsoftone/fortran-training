@@ -201,3 +201,31 @@ call system_clock(ibegin, irate)
 call system_clock(iend)
 print *, "Elapsed time: ", real(iend-ibegin)/real(irate)
 ```
+### 14: Integer arithmetic is truncated (not rounded)
+```
+integer:: i1,i2
+i1 = 1 + 3/2
+i2 = 1 + 2/3
+print *, "i1: ", i1
+print *, "i2: ", i2
+```
+### 15: Arrays up to 7 dimensions
+Fortran arrays are n-dimensional, where: 1 <= n <= 7
+```
+mat_a(i,j)  ! A matrix is a 2-dimensional array
+a4m(ux,uy,uz,ut)  ! A 4-dimensional array
+```
+Array dimensions map to integer values /( 1,2,3,4,5,6,7 /)
+i, ux are the leading dimension (value 1) of mat_a and a4m respectively.  This means they get filled up first...
+### 16: Fortran is column-major
+Whereas Python, C/C++ is row-major.  eg this matrix
+
+| 1 | 100 |
+| 10 | 1000 |
+
+| Memory Location | Fortran (also Julia, Matlab, R) | C/C++, Python |
+| Base | 1 | 1 |
+| Base + 1 | 10 | 100 |
+| Base + 2 | 100 | 10 |
+| Base + 3 | 1000 | 1000 |
+
