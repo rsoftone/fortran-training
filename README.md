@@ -56,9 +56,10 @@ In contrast, Python, Julia, C/C++ and most modern languages treat uppercase and 
 In contrast, Python requires indents as part of its language block syntax.
 ### 3: '!' indicates the start of a comment
 Q: How do you comment out an entire block in Fortran?
+
 A: You can't! (maybe your IDE will help you...)
 ### 4: '&', at the end of a line, means line continuation
-A blank line, or a comment, can come after the '&'
+You may need this is you exceed 132 characters on a line.  A blank line, or a comment, can come after the '&'
 ### 5: Fortran real number values have a 'kind'
 Q: What is the difference between '1.23e0' and '1.23d0'?
 
