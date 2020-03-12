@@ -257,9 +257,9 @@ write(*,dfmt) transpose(mat_a)
 program pg19
     implicit none
     integer :: flatarray(24),     &
-                      matDTQ(2,3,4), &         
-                      matTQD(3,4,2), & 
-                      matQTD(4,3,2)
+               matDTQ(2,3,4), &         
+               matTQD(3,4,2), & 
+               matQTD(4,3,2)
     character(len=64) :: dfmt
     write(dfmt, ‘(a,i0,a)’) ‘(‘ , ubound(matDTQ,2), ‘i5.1)’
     flatarray = [1, 2, 3, 4, 5, 6, &
@@ -280,3 +280,6 @@ program pg19
 end program pg19
 ```
 ### 20: Linear algebra: use BLAS + LAPACK (or MKL) wherever possible
+
+## Fortran condensed reference card
+https://michaelgoerz.net/refcards/fortran_refcard_a4.pdf
