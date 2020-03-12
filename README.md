@@ -241,3 +241,42 @@ mat_a = 10 ! Sets all elements to 10
 mat_a(1,1) = 0 ! Element in row 1, column 1
 write(*,dfmt) transpose(mat_a)
 ```
+### 18: Array slicing uses ':'
+```
+integer, parameter :: mml=8
+double precision :: mat_a(mml,mml)
+character(len=64) :: dfmt
+write(dfmt, ‘(a,i0,a)’) ‘(‘ , mml , ‘f7.1)’
+mat_a(:,2) = 100 ! Set all elements of column 2
+mat_a(2:4,1) = 0 ! Rows 2-4, column 1
+mat_a(1,3:8:2) = 5 ! Row 1, columns 3 + stride of 2, until 8
+write(*,dfmt) transpose(mat_a)
+```
+### 19: 'reshape' is the high-dimensional version of 'transpose'
+```
+program pg19
+    implicit none
+    integer :: flatarray(24),     &
+                      matDTQ(2,3,4), &         
+                      matTQD(3,4,2), & 
+                      matQTD(4,3,2)
+    character(len=64) :: dfmt
+    write(dfmt, ‘(a,i0,a)’) ‘(‘ , ubound(matDTQ,2), ‘i5.1)’
+    flatarray = [1, 2, 3, 4, 5, 6, &
+                 7, 8, 9, 10, 11, 12, &
+                 13, 14, 15, 16, 17, 18, &
+                 19, 20, 21, 22, 23, 24]
+
+    matDTQ = reshape(flatarray, &
+             shape(matDTQ), order=[1,2,3])
+
+    write(*,dfmt) transpose(matDTQ(:,:,1))
+    
+    matTQD = reshape(matDTQ, &
+             shape(matTQD), order=[3,1,2])
+
+    matQTD = reshape(matDTQ, &
+             shape(matQTD), order=[3,2,1])
+end program pg19
+```
+### 20: Linear algebra: use BLAS + LAPACK (or MKL) wherever possible
