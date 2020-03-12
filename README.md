@@ -60,7 +60,7 @@ Q: How do you comment out an entire block in Fortran?
 A: You can't! (maybe your IDE will help you...)
 ### 4: '&', at the end of a line, means line continuation
 You may need this if you exceed 132 characters on a line.  A blank line, or a comment, can come after the '&'
-### 5: Fortran real number values have a 'kind'
+### 5: Fortran number values have a 'kind'
 Q: What is the difference between '1.23e0' and '1.23d0'?
 
 A: '1.23e0' is 'single precision'
@@ -86,3 +86,10 @@ Non-numeric
 ```
 character :: s
 ```
+### 8: Type conversions for numeric variables
+During assignment and initialisation : Yes
+```
+integer :: a
+a = 1.0d0 ! Interpreted as a = int(1.0d0,kind=kind(a))
+```
+In the argument of procedure calls: No!
