@@ -3,6 +3,9 @@
 Course online materials:
 https://sway.office.com/FrztLkLkmyxuMAlT
 
+Additional materials:
+https://docs.google.com/presentation/d/1qm7PymEsud4qpEGCpemQ5XWmfTKTWRk86_W0oiKlvvI/edit?usp=sharing_eip&ts=5e3cd155
+
 ## Quickstart
 ### Option A: Using Docker on your own computer
 #### Windows 10: 
