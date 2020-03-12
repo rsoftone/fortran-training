@@ -52,6 +52,8 @@ chmod u+x helper.sh
 ## 20 things to know about Fortran
 ### 1: Fortran is not case sensitive
 In contrast, Python, Julia, C/C++ and most modern languages treat uppercase and lowercase as different cases.
+
+Tip: Follow the convention used in your inherited code
 ### 2: Indented code is not required
 In contrast, Python requires indents as part of its language block syntax.
 ### 3: '!' indicates the start of a comment
@@ -93,3 +95,12 @@ integer :: a
 a = 1.0d0 ! Interpreted as a = int(1.0d0,kind=kind(a))
 ```
 In the argument of procedure calls: No!
+### 9: Strings are character arrays with a specific length (len)
+```
+character(len=10) :: s1,s2
+character(len=20) :: s3
+s1 = "Hello"
+s2 = "World"
+s3 = trim(s1) // " " // trim(s2)  ! Concatenation operator //
+print *,"Complete message: ", s3
+```
