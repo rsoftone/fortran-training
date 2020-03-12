@@ -219,11 +219,12 @@ Array dimensions map to integer values /( 1,2,3,4,5,6,7 /)
 i, ux are the leading dimension (value 1) of mat_a and a4m respectively.  This means they get filled up first...
 ### 16: Fortran is column-major
 Whereas Python, C/C++ is row-major.  eg this matrix
-
-| 1 | 100 |
-| 10 | 1000 |
-
+```
+ 1  100
+ 10 1000
+```
 | Memory Location | Fortran (also Julia, Matlab, R) | C/C++, Python |
+| --------------- | ------------------------------- | ------------- |
 | Base | 1 | 1 |
 | Base + 1 | 10 | 100 |
 | Base + 2 | 100 | 10 |
