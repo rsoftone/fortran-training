@@ -216,6 +216,7 @@ mat_a(i,j)  ! A matrix is a 2-dimensional array
 a4m(ux,uy,uz,ut)  ! A 4-dimensional array
 ```
 Array dimensions map to integer values /( 1,2,3,4,5,6,7 /)
+
 i, ux are the leading dimension (value 1) of mat_a and a4m respectively.  This means they get filled up first...
 ### 16: Fortran is column-major
 Whereas Python, C/C++ is row-major.  eg this matrix
@@ -230,3 +231,13 @@ Whereas Python, C/C++ is row-major.  eg this matrix
 | Base + 2 | 100 | 10 |
 | Base + 3 | 1000 | 1000 |
 
+### 17: Array indexing starts at 1
+```
+integer, parameter :: mml=8
+double precision :: mat_a(mml,mml)
+character(len=64) :: dfmt
+write(dfmt, ‘(a,i0,a)’) ‘(‘ , mml , ‘f7.1)’
+mat_a = 10 ! Sets all elements to 10
+mat_a(1,1) = 0 ! Element in row 1, column 1
+write(*,dfmt) transpose(mat_a)
+```
