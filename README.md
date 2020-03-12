@@ -151,3 +151,21 @@ subroutine exsub1(qin)
         return
 end subroutine exsub1
 ```
+### 12: A module interfaces to subroutines (and globals!) that are used in many places
+```
+module ex12module
+        implicit none
+        save
+        private
+        public :: modsub1, seti141, geti42
+        integer :: i42,i141
+        contains 
+        subroutine modsub1(q) 
+            implicit none
+            integer, intent(inout) :: q
+            q = q + i141
+            i42 = 11242
+            return
+        end subroutine modsub1
+
+```
