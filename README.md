@@ -104,7 +104,7 @@ s2 = "World"
 s3 = trim(s1) // " " // trim(s2)  ! Concatenation operator //
 print *,"Complete message: ", s3
 ```
-## 10: A subroutine contained in a parent program can access parent variables
+### 10: A subroutine contained in a parent program can access parent variables
 ```
 program pg10
     implicit none
@@ -126,4 +126,28 @@ contains
     end subroutine insub1
 
 end program pg10
+```
+### 11: common blocks are for globals
+Tip: main program should have all common blocks
+```
+program pg11
+implicit none
+integer :: q1,i141,i42
+        common /gblk1/ i42, i141
+        i141 = 141
+        i42 = 42
+        q1 = 11
+        call exsub1(q1) 
+        print *, “q1: ”, q1
+        print *, “i42: ” , i42
+end program pg11
+subroutine exsub1(qin)
+        implicit none
+        integer, intent(inout) :: qin
+        integer :: i42,i141
+        common /gblk1/ i42,i141
+        qin = qin + i141
+        i42 = 1042
+        return
+end subroutine exsub1
 ```
