@@ -131,24 +131,24 @@ end program pg10
 Tip: main program should have all common blocks
 ```
 program pg11
-implicit none
-integer :: q1,i141,i42
-        common /gblk1/ i42, i141
-        i141 = 141
-        i42 = 42
-        q1 = 11
-        call exsub1(q1) 
-        print *, “q1: ”, q1
-        print *, “i42: ” , i42
+    implicit none
+    integer :: q1,i141,i42
+    common /gblk1/ i42, i141
+    i141 = 141
+    i42 = 42
+    q1 = 11
+    call exsub1(q1) 
+    print *, “q1: ”, q1
+    print *, “i42: ” , i42
 end program pg11
 subroutine exsub1(qin)
-        implicit none
-        integer, intent(inout) :: qin
-        integer :: i42,i141
-        common /gblk1/ i42,i141
-        qin = qin + i141
-        i42 = 1042
-        return
+    implicit none
+    integer, intent(inout) :: qin
+    integer :: i42,i141
+    common /gblk1/ i42,i141
+    qin = qin + i141
+    i42 = 1042
+    return
 end subroutine exsub1
 ```
 ### 12: A module interfaces to subroutines (and globals!) that are used in many places
