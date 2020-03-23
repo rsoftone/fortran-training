@@ -18,7 +18,7 @@ https://docs.google.com/presentation/d/1qm7PymEsud4qpEGCpemQ5XWmfTKTWRk86_W0oiKl
 ```
 docker run -it --rm --name fort2 -v $PWD\Documents:/home/pipelines dbjochym/gfortran_static_lapack_blas
 ```
-
+* If asked, allow your directory to be shared
 * You are now in the container...enter the following commands:
 
 ```
