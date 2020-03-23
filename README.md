@@ -12,6 +12,7 @@ https://docs.google.com/presentation/d/1qm7PymEsud4qpEGCpemQ5XWmfTKTWRk86_W0oiKl
 * Install Docker: https://www.docker.com/products/docker-desktop
 * In Computer Management, add your username to the 'docker-users' local group
 * Restart your computer
+* If it does not run on startup, start Docker Desktop
 * Open Powershell
 * Enter command:
 
