@@ -8,6 +8,10 @@ https://docs.google.com/presentation/d/1qm7PymEsud4qpEGCpemQ5XWmfTKTWRk86_W0oiKl
 
 ## Quickstart
 ### Option A: Using Docker on your own computer
+#### Mac OS:
+* Install [Docker](https://www.docker.com/products/docker-desktop) 
+* 
+
 #### Windows 10: 
 * Install Docker: https://www.docker.com/products/docker-desktop
 * In Computer Management, add your username to the 'docker-users' local group
