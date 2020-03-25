@@ -19,6 +19,8 @@ https://docs.google.com/presentation/d/1qm7PymEsud4qpEGCpemQ5XWmfTKTWRk86_W0oiKl
 ```
 docker run -it --rm --name fort2 -v $PWD/Documents:/home/pipelines junglegreen/fortran-training
 ```
+* If asked, allow your Documents directory to be shared/accessed
+
 #### Windows 10: 
 * Install Docker: https://www.docker.com/products/docker-desktop
 * In Computer Management, add your username to the 'docker-users' local group
@@ -30,9 +32,10 @@ docker run -it --rm --name fort2 -v $PWD/Documents:/home/pipelines junglegreen/f
 ```
 docker run -it --rm --name fort2 -v $PWD\Documents:/home/pipelines junglegreen/fortran-training
 ```
-#### Both Mac OS and Windows 10:
 * If asked, allow your Documents directory to be shared/accessed
-* You are now in the container...enter the following commands:
+
+#### Both Mac OS and Windows 10:
+* Inside the container...enter the following commands:
 
 ```
 cd /home/pipelines
