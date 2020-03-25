@@ -11,7 +11,7 @@ https://docs.google.com/presentation/d/1qm7PymEsud4qpEGCpemQ5XWmfTKTWRk86_W0oiKl
 #### Mac OS:
 * Install [Docker](https://www.docker.com/products/docker-desktop) 
 * Start Docker Desktop
-* When informed that "Docker Desktop needs privileged access", click: OK (and the enter your password)
+* When informed that "Docker Desktop needs privileged access", click: OK (and then enter your password)
 * Wait until "Docker Desktop is starting" is completed
 * Open Terminal
 * Enter command:
@@ -47,9 +47,12 @@ chmod u+x helper.sh
 ```
 
 ### Option B: Using NCI Gadi
+#### Mac OS
+* Open Terminal
 #### Windows 10:
 * Open Powershell
 * If ssh is not enabled on your Windows 10, please see the instructions [here](https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/)
+#### Both Mac OS and Windows 10
 * Login to Gadi:
 ```
 ssh YOUR_USERNAME@gadi.nci.org.au
