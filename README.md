@@ -13,12 +13,14 @@ https://docs.google.com/presentation/d/1qm7PymEsud4qpEGCpemQ5XWmfTKTWRk86_W0oiKl
 * Start Docker Desktop
 * When informed that "Docker Desktop needs privileged access", click: OK (and the enter your password)
 * Wait until "Docker Desktop is starting" is completed
+* Open Terminal
 #### Windows 10: 
 * Install Docker: https://www.docker.com/products/docker-desktop
 * In Computer Management, add your username to the 'docker-users' local group
 * Restart your computer
 * If it does not run on startup, start Docker Desktop
 * Open Powershell
+#### Both Mac OS and Windows 10:
 * Enter command:
 
 ```
