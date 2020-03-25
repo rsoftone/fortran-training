@@ -14,19 +14,29 @@ https://docs.google.com/presentation/d/1qm7PymEsud4qpEGCpemQ5XWmfTKTWRk86_W0oiKl
 * When informed that "Docker Desktop needs privileged access", click: OK (and the enter your password)
 * Wait until "Docker Desktop is starting" is completed
 * Open Terminal
+* Enter command:
+
+```
+docker run -it --rm --name fort2 -v $PWD/Documents:/home/pipelines junglegreen/fortran-training
+```
 #### Windows 10: 
 * Install Docker: https://www.docker.com/products/docker-desktop
 * In Computer Management, add your username to the 'docker-users' local group
 * Restart your computer
 * If it does not run on startup, start Docker Desktop
 * Open Powershell
+* Enter command:
+
+```
+docker run -it --rm --name fort2 -v $PWD\Documents:/home/pipelines junglegreen/fortran-training
+```
 #### Both Mac OS and Windows 10:
 * Enter command:
 
 ```
 docker run -it --rm --name fort2 -v $PWD\Documents:/home/pipelines junglegreen/fortran-training
 ```
-* If asked, allow your directory to be shared
+* If asked, allow your Documents directory to be shared/accessed
 * You are now in the container...enter the following commands:
 
 ```
