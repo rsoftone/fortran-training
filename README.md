@@ -31,11 +31,6 @@ docker run -it --rm --name fort2 -v $PWD/Documents:/home/pipelines junglegreen/f
 docker run -it --rm --name fort2 -v $PWD\Documents:/home/pipelines junglegreen/fortran-training
 ```
 #### Both Mac OS and Windows 10:
-* Enter command:
-
-```
-docker run -it --rm --name fort2 -v $PWD\Documents:/home/pipelines junglegreen/fortran-training
-```
 * If asked, allow your Documents directory to be shared/accessed
 * You are now in the container...enter the following commands:
 
