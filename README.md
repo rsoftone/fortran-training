@@ -344,3 +344,7 @@ Without this...**all** undeclared variables are assumed to be REAL, **except** t
 * i, j, k, l, m, n (these are assumedto be INTEGER)
 
 Note that you can also override this...
+### 7: Variable names are restricted to max. 6 letters
+**First letter** must be a **character [a-zA-Z]**
+
+Except for the first letter, digits [0-9] are allowed as well
