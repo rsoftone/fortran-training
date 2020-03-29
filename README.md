@@ -482,12 +482,12 @@ Workaround: pass the array to a subroutine as an 'assumed-size' 1D array
       IMPLICIT NONE
       INTEGER   sz
       PARAMETER(sz=3)
-      DOUBLE PRECISION      a(sz,sz),b
+      DOUBLE PRECISION      a(sz,sz),b(sz)
       DATA a / 1.0d0, 2.0d0, 3.0d0,
      &         4.0d0, 5.0d0, 6.0d0,
      &         7.0d0, 8.0d0, 9.0d0 /
-      b = 0.1d0
-      CALL mulct(a(1,2),b(1),(2*absz-1))
+      b(sz) = 0.1d0
+      CALL mulct(a(1,2),b(1),(2*sz-1))
       END PROGRAM sld14
 *****
       SUBROUTINE multct(a,b,na)
