@@ -71,6 +71,10 @@ chmod u+x helper.sh
 ```
 ./helper.sh 000-lu
 ```
+
+## Fortran condensed reference card
+https://michaelgoerz.net/refcards/fortran_refcard_a4.pdf
+
 ## 20 things to know about Fortran
 ### 1: Fortran is not case sensitive
 In contrast, Python, Julia, C/C++ and most modern languages treat uppercase and lowercase as different cases.
@@ -303,5 +307,3 @@ end program pg19
 ```
 ### 20: Linear algebra: use BLAS + LAPACK (or MKL) wherever possible
 
-## Fortran condensed reference card
-https://michaelgoerz.net/refcards/fortran_refcard_a4.pdf
