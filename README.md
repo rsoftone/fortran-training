@@ -409,13 +409,11 @@ Except for the first letter, digits [0-9] are allowed as well
       INTEGER         n,nidx,nmax
       PARAMETER(nmax=5)
       DO 10, nidx = 1,3
-*****
           WRITE(*,*) "Enter a number:"
     5     READ(*,*) n
           IF (n .LT. nmax) THEN
               GO TO 5
- 
-      END IF 
+          END IF 
    10 CONTINUE
       END PROGRAM sld11
 ```
