@@ -308,6 +308,24 @@ end program pg19
 ### 20: Linear algebra: use BLAS + LAPACK (or MKL) wherever possible
 ## Fortran77
 ### 1: Fortran77 is **not** free form
-Columns have specific entries/values
+Columns have specific entries/values...
 
-Comments have: character c , or character *, in **column 1**
+**Comments** have: character 'c' , or character '*', in **column 1**
+### 2: Statements begin at column 7 and finish as column 72
+Unless it meets the criteria for a comment, the characters in columns 1-5 are used to **label** the proceeding code statement
+
+Q: Is a label required for each code statement?
+
+A: No
+### 3: '!' is not a standard Fortran77 comment
+```
+******
+****** #3: ! is not a standard Fortran77 comment
+******
+      REAL :: r  ! This comment is not valid in Fortran77 
+      DOUBLE PRECISION :: x
+! This comment is also not valid…
+      COMPLEX :: z
+c     This is a valid comment
+c         And so is this
+```
