@@ -426,7 +426,7 @@ Analogous to C++ pass-by-reference
       PROGRAM sld12
       IMPLICIT NONE
       INTEGER n,ier        
-      WRITE(*,*) "Enter a number:“
+      WRITE(*,*) "Enter a number:"
       READ(*,'(i32)',IOSTAT=ier) n
       IF ( ier .EQ. 0) THEN
 	      CALL add0(n,n)
