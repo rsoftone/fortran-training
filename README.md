@@ -459,13 +459,13 @@ Analogous to C++ pass-by-reference
      &            400 /
       CALL bradd(a,b,sz)
       DO 100, outi = 1,sz
-*****
           DO 90, outj = 1,sz
               b(outj) = a(outi,outj)
    90     CONTINUE
           WRITE(*,*) b
   100 CONTINUE
-      END PROGRAM sld13 
+      END PROGRAM sld13
+*****
       SUBROUTINE bradd(a,b,absz)
       INTEGER    absz,i,j
       REAL       a(absz,absz),b(absz)
