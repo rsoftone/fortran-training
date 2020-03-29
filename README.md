@@ -393,9 +393,9 @@ Except for the first letter, digits [0-9] are allowed as well
       IMPLICIT NONE
       REAL        zph
       COMPLEX     zorig, z1
+      zph(z1) = ATAN2(AIMAG(z1),REAL(z1))
 ***** Assign zorig = 0 – 1i
       zorig = (0,-1)
-      zph(z1) = ATAN2(AIMAG(z1),REAL(z1))
       WRITE(*,*) zph(zorig)
       WRITE(*,*) zorig%RE,’ ’,zorig%IM
       END PROGRAM sld10
