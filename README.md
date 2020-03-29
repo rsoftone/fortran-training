@@ -306,4 +306,8 @@ program pg19
 end program pg19
 ```
 ### 20: Linear algebra: use BLAS + LAPACK (or MKL) wherever possible
+## Fortran77
+### 1: Fortran77 is **not** free form
+Columns have specific entries/values
 
+Comments have: character c , or character *, in **column 1**
