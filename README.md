@@ -374,7 +374,7 @@ Except for the first letter, digits [0-9] are allowed as well
 ```
 ### 9: Strings are CHARACTER arrays
 ```
-***** Fortran 77 strings 
+***** Fortran77 strings 
       PROGRAM sld9
       IMPLICIT NONE
       CHARACTER*10    s1
@@ -385,5 +385,18 @@ Except for the first letter, digits [0-9] are allowed as well
       s3 = TRIM(s1) // “ ” // s2
       PRINT *, “Complete message:  ” , s3
       END PROGRAM sld9
-
+```
+### 10: Statement functions for scalars
+```
+***** Fortran77 function
+      PROGRAM sld10
+      IMPLICIT NONE
+      REAL        zph
+      COMPLEX     zorig, z1
+***** Assign zorig = 0 – 1i
+      zorig = (0,-1)
+      zph(z1) = ATAN2(AIMAG(z1),REAL(z1))
+      WRITE(*,*) zph(zorig)
+      WRITE(*,*) zorig%RE,’ ’,zorig%IM
+      END PROGRAM sld10
 ```
