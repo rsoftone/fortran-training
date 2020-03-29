@@ -386,7 +386,7 @@ Except for the first letter, digits [0-9] are allowed as well
       PRINT *, “Complete message:  ” , s3
       END PROGRAM sld9
 ```
-### 10: Statement functions for scalars
+### 10: Statement function for scalars
 ```
 ***** Fortran77 function
       PROGRAM sld10
@@ -399,4 +399,105 @@ Except for the first letter, digits [0-9] are allowed as well
       WRITE(*,*) zph(zorig)
       WRITE(*,*) zorig%RE,’ ’,zorig%IM
       END PROGRAM sld10
+```
+### 11: No recursion allowed in Fortran77
+! Legacy codes frequently have: 'GO TO some-number-label'
+```
+***** Fortran77 GO TO…
+      PROGRAM sld11
+      IMPLICIT NONE
+      INTEGER         n,nidx,nmax
+      PARAMETER(nmax=5)
+      DO 10, nidx = 1,3
+*****
+          WRITE(*,*) "Enter a number:"
+    5     READ(*,*) n
+          IF (n .LT. nmax) THEN
+              GO TO 5
+ 
+      END IF 
+   10 CONTINUE
+      END PROGRAM sld11
+```
+### 12: Arguments that are modified in subroutines are reflected in the parent variable
+! Avoid numeric values as arguments
+
+Analogous to C++ pass-by-reference
+```
+***** F77 assignment to argument
+      PROGRAM sld12
+      IMPLICIT NONE
+      INTEGER n,ier        
+      WRITE(*,*) "Enter a number:“
+      READ(*,'(i32)',IOSTAT=ier) n
+      IF ( ier .EQ. 0) THEN
+	      CALL add0(n,n)
+          WRITE(*,*) n
+      END IF
+      END PROGRAM sld12
+*****
+      SUBROUTINE add0(ain0,ain1)
+      INTEGER ain0,ain1
+      ain1 = ain0+ain1
+      END SUBROUTINE
+```
+### 13: Pass array bounds as arguments
+```
+***** Fortran77 arrays with size arguments
+      PROGRAM sld13
+      IMPLICIT NONE
+      INTEGER   sz,outi,outj
+      PARAMETER(sz=4)
+      REAL    a(sz,sz),b(sz)
+      DATA    a / 1.0 , 2.0 , 3.0 , 4.0,
+     &            5.0 , 6.0 , 7.0 , 8.0,
+     &            9.0 , 10.0, 11.0, 12.0,
+     &            13.0, 14.0, 15.0, 16.0 /
+      DATA    b / 100,
+     &            200,
+     &            300,
+     &            400 /
+      CALL bradd(a,b,sz)
+      DO 100, outi = 1,sz
+*****
+          DO 90, outj = 1,sz
+              b(outj) = a(outi,outj)
+   90     CONTINUE
+          WRITE(*,*) b
+  100 CONTINUE
+      END PROGRAM sld13 
+      SUBROUTINE bradd(a,b,absz)
+      INTEGER    absz,i,j
+      REAL       a(absz,absz),b(absz)
+      DO 10, j = 1,absz
+          DO 20, i = 1,absz
+             a(i,j) = a(i,j) + b(i)
+   20     CONTINUE
+   10 CONTINUE
+      END SUBROUTINE bradd
+```
+### 14: Array slicing ':' is not available
+Workaround: pass the array to a subroutine as an 'assumed-size' 1D array
+```
+***** Fortran77 assumed-size array example
+      PROGRAM sld14
+      IMPLICIT NONE
+      INTEGER   sz
+      PARAMETER(sz=3)
+      DOUBLE PRECISION      a(sz,sz),b
+      DATA a / 1.0d0, 2.0d0, 3.0d0,
+     &         4.0d0, 5.0d0, 6.0d0,
+     &         7.0d0, 8.0d0, 9.0d0 /
+      b = 0.1d0
+      CALL mulct(a(1,2),b(1),(2*absz-1))
+      END PROGRAM sld14
+*****
+      SUBROUTINE multct(a,b,na)
+      INTEGER    na,i
+***** a(*) is an assumed-sized array
+      DOUBLE PRECISION       a(*),b
+      DO 20, i = 1,na
+             a(i) = a(i) * b
+   20 CONTINUE
+      END SUBROUTINE multct
 ```
