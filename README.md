@@ -361,9 +361,9 @@ Except for the first letter, digits [0-9] are allowed as well
       CHARACTER*512     dfmt
       WRITE(dfmt, '(a,i0,a)')
      &            '(' , mml , 'f7.2)'
-      meye = 0.0e0
+      meye = 0.0d0
       DO i = 1,mml
-          meye(i,i) = 1.0e0
+          meye(i,i) = 1.0d0
       END DO
       retinfo = INT(meye(2,2))
 ***** Output will appear transposed
@@ -371,4 +371,19 @@ Except for the first letter, digits [0-9] are allowed as well
       WRITE(*,*) 'Return:',retinfo
       END PROGRAM pg
 ***** End of example Fortran77
+```
+### 9: Strings are CHARACTER arrays
+```
+***** Fortran 77 strings 
+      PROGRAM sld9
+      IMPLICIT NONE
+      CHARACTER*10    s1
+      CHARACTER*(*)   s2
+      CHARACTER*20    s3
+      PARAMETER(s2 = “World!”)
+      s1 = “Hello”
+      s3 = TRIM(s1) // “ ” // s2
+      PRINT *, “Complete message:  ” , s3
+      END PROGRAM sld9
+
 ```
