@@ -329,3 +329,18 @@ A: No
 c     This is a valid comment
 c         And so is this
 ```
+### 4: Non-blank at column 6 means line continuation
+Tip: Use '&' or '+'
+### 5: Fortran77 values do not have the concept of 'kind'
+REAL - usually 4 bytes: 1.23e2
+
+DOUBLE PRECISION - usually 8 bytes: 1.23d2
+
+INTEGER - usually 4 bytes: 123
+### 6: IMPLICIT NONE
+Always use IMPLICIT NONE
+
+Without this...**all** variables are assumed to be REAL, **except** those that **start** with the characters:
+* i, j, k, l, m, n (these are assumedto be INTEGER)
+
+Note that you can also override this...
