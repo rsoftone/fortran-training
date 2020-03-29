@@ -340,7 +340,7 @@ INTEGER - usually 4 bytes: 123
 ### 6: IMPLICIT NONE
 Always use IMPLICIT NONE
 
-Without this...**all** variables are assumed to be REAL, **except** those that **start** with the characters:
+Without this...**all** undeclared variables are assumed to be REAL, **except** those that **start** with the characters:
 * i, j, k, l, m, n (these are assumedto be INTEGER)
 
 Note that you can also override this...
