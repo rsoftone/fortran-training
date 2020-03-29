@@ -361,4 +361,14 @@ Except for the first letter, digits [0-9] are allowed as well
       CHARACTER*512     dfmt
       WRITE(dfmt, '(a,i0,a)')
      &            '(' , mml , 'f7.2)'
+      meye = 0.0e0
+      DO i = 1,mml
+          meye(i,i) = 1.0e0
+      END DO
+      retinfo = INT(meye(2,2))
+***** Output will appear transposed
+      WRITE(*,dfmt) meye
+      WRITE(*,*) 'Return:',retinfo
+      END PROGRAM pg
+***** End of example Fortran77
 ```
