@@ -322,10 +322,10 @@ A: No
 ******
 ****** #3: ! is not a standard Fortran77 comment
 ******
-      REAL :: r  ! This comment is not valid in Fortran77 
-      DOUBLE PRECISION :: x
+      REAL  r  ! This comment is not valid in Fortran77 
+      DOUBLE PRECISION  x
 ! This comment is also not valid…
-      COMPLEX :: z
+      COMPLEX  z
 c     This is a valid comment
 c         And so is this
 ```
