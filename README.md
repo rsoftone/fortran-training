@@ -21,7 +21,7 @@ docker run -it --rm --name fort2 -v $PWD/Documents:/home/pipelines junglegreen/f
 ```
 * If asked, allow your Documents directory to be shared/accessed
 
-#### Windows 10: 
+#### Windows 10 (Pro or Enterprise): 
 * Install Docker: https://www.docker.com/products/docker-desktop
 * In Computer Management, add your username to the 'docker-users' local group
 * Restart your computer
@@ -34,7 +34,7 @@ docker run -it --rm --name fort2 -v $PWD\Documents:/home/pipelines junglegreen/f
 ```
 * If asked, allow your Documents directory to be shared/accessed
 
-#### Both Mac OS and Windows 10:
+#### Both Mac OS and Windows 10 (Pro or Enterprise):
 * Inside the container...enter the following commands:
 
 ```
