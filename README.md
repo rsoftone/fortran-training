@@ -487,7 +487,7 @@ Workaround: pass the array to a subroutine as an 'assumed-size' 1D array
      &         4.0d0, 5.0d0, 6.0d0,
      &         7.0d0, 8.0d0, 9.0d0 /
       b(sz) = 0.1d0
-      CALL mulct(a(1,2),b(1),(2*sz-1))
+      CALL multct(a(1,2),b(1),(2*sz-1))
       END PROGRAM sld14
 *****
       SUBROUTINE multct(a,b,na)
