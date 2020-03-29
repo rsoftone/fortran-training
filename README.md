@@ -341,10 +341,24 @@ INTEGER - usually 4 bytes: 123
 Always use IMPLICIT NONE
 
 Without this...**all** undeclared variables are assumed to be REAL, **except** those that **start** with the characters:
-* i, j, k, l, m, n (these are assumedto be INTEGER)
+* i, j, k, l, m, n (these are assumed to be INTEGER)
 
 Note that you can also override this...
 ### 7: Variable names are restricted to max. 6 letters
 **First letter** must be a **character [a-zA-Z]**
 
 Except for the first letter, digits [0-9] are allowed as well
+### 8: Use PARAMETER for constants
+```
+***** Fortran77 example: 000-lu77.f
+*****
+      PROGRAM pg
+      IMPLICIT NONE
+      INTEGER           mml
+      PARAMETER(mml=3)
+      INTEGER           i,retinfo
+      DOUBLE PRECISION  meye(mml,mml)
+      CHARACTER*512     dfmt
+      WRITE(dfmt, '(a,i0,a)')
+     &            '(' , mml , 'f7.2)'
+```
