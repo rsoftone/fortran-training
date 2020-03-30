@@ -517,3 +517,10 @@ Note: IARGC and GETARG are compiler-specific extensions of Fortran77
   100 CONTINUE
       END PROGRAM sld15
 ```
+## BLAS and LAPACK
+Details for Docker users (reference libraries):
+[BLAS](http://www.netlib.org/lapack/lug/node145.html)
+[LAPACK](http://www.netlib.org/lapack/lug/node38.html)
+
+Details for Gadi users (Intel MKL):
+[MKL](https://software.intel.com/en-us/mkl-developer-reference-fortran-lapack-routines)
