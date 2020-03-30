@@ -499,3 +499,21 @@ Workaround: pass the array to a subroutine as an 'assumed-size' 1D array
    20 CONTINUE
       END SUBROUTINE multct
 ```
+### 15: Command line arguments
+Note: IARGC and GETARG are compiler-specific extensions of Fortran77
+```
+***** Fortran77 command arguments
+      PROGRAM sld15
+      IMPLICIT NONE
+      INTEGER       nar,aridx
+      CHARACTER*64  argbuf
+      nar = IARGC()
+      WRITE(*,*) "Number of command arguments: ", nar
+      CALL GETARG(aridx,argbuf) 
+      WRITE(*,*) "Command: ", argbuf
+      DO 100, aridx = 1,nar
+          CALL GETARG(aridx,argbuf)
+          WRITE(*,*) "Argument: ", argbuf
+  100 CONTINUE
+      END PROGRAM sld15
+```
